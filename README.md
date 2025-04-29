@@ -1,5 +1,6 @@
-[PT-br]
-📚 Dynamic Model Binding with Live Preview (addEvents Function)
+**[PT-br]**
+
+### 📚 Dynamic Model Binding with Live Preview (addEvents Function)
 Este guia ensina como integrar o sistema de binding dinâmico que conecta inputs HTML com um modelo de dados em JavaScript, e ainda atualiza visualmente valores em elementos data-result.
 
 ✨ Objetivo
@@ -24,7 +25,7 @@ Um campo de input, select, textarea, checkbox ou radio com um id correspondente 
 Um elemento com o atributo data-result="nomePropriedade" onde o valor será exibido.
 
 Exemplo:
-```
+```html
 <div>
     <label>Brand</label>
     <input id="brand" name="brand" type="text">
@@ -37,7 +38,7 @@ Seu model pode ser um objeto simples ou ter um método applyProperty para aplica
 
 Exemplo básico:
 
-```
+```javacript
 class VehicleModel {
     constructor() {
         this.brand = null;
@@ -48,7 +49,8 @@ class VehicleModel {
 ```
 3. Inicializar no seu Sistema
 No seu JavaScript principal, chame:
-```
+
+```javascript
 const model = new VehicleModel();
 
 // Considerando que "this" seja um objeto ou classe que contém addEvents
@@ -74,8 +76,7 @@ Caso queira fazer animações ou destacar o <p> ao mudar o valor, é possível a
 
 ✅ Exemplo Final Visual
 
-Html:
-```
+```html
 <div>
     <label>Brand:</label>
     <input id="brand" type="text">
@@ -83,8 +84,7 @@ Html:
 </div>
 ```
 
-Javascript:
-```
+```javacsript
 const model = new VehicleModel();
 addEvents(model);
 
@@ -92,8 +92,8 @@ addEvents(model);
 // E o <p> aparecerá "Toyota"
 ```
 
-[En-Us]
-📚 Dynamic Model Binding with Live Preview (addEvents Function)
+**[En-Us]**
+### 📚 Dynamic Model Binding with Live Preview (addEvents Function)
 This guide teaches you how to integrate the dynamic binding system that connects HTML inputs with a JavaScript model, and also live-updates values in data-result elements.
 
 ✨ Objective
@@ -118,7 +118,7 @@ An input, select, textarea, checkbox, or radio element with an id that matches t
 An element with the attribute data-result="propertyName" where the value will be displayed.
 
 Example:
-```
+```html
 <div>
     <label>Brand</label>
     <input id="brand" name="brand" type="text">
@@ -132,7 +132,7 @@ Your model can be a simple object or a class that has an applyProperty method to
 
 Basic example:
 
-```
+```javascript
 class VehicleModel {
     constructor() {
         this.brand = null;
@@ -145,7 +145,8 @@ class VehicleModel {
 
 3. Initialize it in your System
 In your main JavaScript code, call:
-```
+
+```javascript
 const model = new VehicleModel();
 
 // Assuming "this" is an object or class that contains addEvents
@@ -170,8 +171,7 @@ You can easily add animations or highlights to the <p> when the value changes if
 
 ✅ Final Visual Example
 
-Html:
-``` 
+```html
 <div>
     <label>Brand:</label>
     <input id="brand" type="text">
@@ -180,8 +180,7 @@ Html:
 
 ```
 
-Javascript:
-```
+```javascript
 const model = new VehicleModel();
 addEvents(model);
 
