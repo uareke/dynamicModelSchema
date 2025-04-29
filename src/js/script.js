@@ -13,7 +13,7 @@ import { VehicleModel } from '../models/vehicle-model.js';
  */
 (function () {
 
-    let modelo = new VehicleModel();
+    let Vehicle = new VehicleModel();
 
     /**
      * INDEX Object
@@ -35,7 +35,7 @@ import { VehicleModel } from '../models/vehicle-model.js';
             });
 
             //start autoform fields
-            autoForm.initializeForm(modelo); 
+            autoForm.initializeForm(Vehicle); 
 
         },
 
@@ -73,7 +73,8 @@ import { VehicleModel } from '../models/vehicle-model.js';
 
             const actions = {
                 // Maps the button ID to the save function
-                'btn-click-button': this.save,
+                
+                'btn-submit-data': this.SubmitDate,
             };
 
             if (actions[event.target.id]) {
@@ -89,8 +90,9 @@ import { VehicleModel } from '../models/vehicle-model.js';
          * 
          * @function
          */
-        save() {
+        SubmitDate() {
             // Implement saving logic here
+            console.log(Vehicle);
         },
 
     };

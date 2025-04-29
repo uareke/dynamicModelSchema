@@ -1,9 +1,8 @@
 import { applyTypes } from '../plugins/apply-types.js';
 import { BaseModel } from '../models/base-model.js';
 
-export class VehicleModel extends BaseModel {
+export class VehicleModel{
     constructor() {
-        super();
 
         this.brand = null;
         this.model = null;
@@ -11,10 +10,9 @@ export class VehicleModel extends BaseModel {
         this.category = null;   
 
         this.schema = {
-            ...this.schema, 
             brand: 'string',
             model: 'string',
-            year: 'string',
+            year: 'int',
             category: 'string'
         };
     }

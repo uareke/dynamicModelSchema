@@ -45,6 +45,7 @@ export const autoForm = {
         try {
             for (let property in model.schema || model) {
                 const field = document.getElementById(property);
+                const fieldData = document.querySelector(`[data-result="${property}"]`);
                 if (field) {
                     const updateModel = (value) => {
                         const entry = { [property]: value };
@@ -52,6 +53,10 @@ export const autoForm = {
                             model.applyProperty(property, value);
                         } else {
                             model[property] = value;
+                        }
+
+                        if (fieldData) {
+                            fieldData.textContent = value;
                         }
                     };
 
